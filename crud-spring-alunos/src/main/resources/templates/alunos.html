@@ -14,24 +14,25 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Sistema de Alunos</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-    </div>
-  </div>
-</nav>
-<br>
-<br>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Sistema de Alunos</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+			aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+
+			</div>
+		</div>
+	</nav>
+
 	<div class="container">
 		<div class="row">
 			<h1>Relação de Alunos</h1>
 		</div>
-		
+
 		<div class="row">
 			<div class="col-lg-3">
 				<a th:href="@{/alunos/cadastro}" class="btn btn-primary btn-sm mb-3">Adicionar</a>
@@ -45,23 +46,25 @@
 					<th scope="col">Sobrenome</th>
 					<th scope="col">Idade</th>
 					<th scope="col">Email</th>
-					<th scope="col"> Ações</th>
+					
 				</tr>
 			</thead>
+
 			<tbody>
 				<tr th:each="aluno:${alunos}">
 					<td th:text="${aluno.nome}"></td>
 					<td th:text="${aluno.sobrenome}"></td>
 					<td th:text="${aluno.idade}"></td>
 					<td th:text="${aluno.email}"></td>
-					<td th:text="${aluno.acoes}"></td>
+					
 
 				</tr>
 
 			</tbody>
 		</table>
-	
+
 
 	</div>
 </body>
+
 </html>
