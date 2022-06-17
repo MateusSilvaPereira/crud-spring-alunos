@@ -57,7 +57,7 @@ public class AlunoController {
 		return "redirect:/alunos";
 	}
 	
-	@DeleteMapping("/alunos/excluir/{id}")
+	@GetMapping("/alunos/excluir/{id}")
 	public String excluirAluno(@PathVariable Long id) {
 		alunoService.excluirAlunoById(id);
 		return "redirect:/alunos";

@@ -38,9 +38,8 @@ public class AlunoServiceImplements implements AlunoService{
 	@Override
 	public void excluirAlunoById(Long id) {
 		alunoRepository.deleteById(id);
+		
 	}
 
-
-	
 
 }
